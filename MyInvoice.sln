@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2020
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInvoice", "MyInvoice\MyInvoice.csproj", "{002E43FD-A3F1-4915-A3F8-FE10091C6B47}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1ADF601D-83C1-44A5-A84D-E6DE0C7EDBA9} = {1ADF601D-83C1-44A5-A84D-E6DE0C7EDBA9}
+		{BD78E284-96F6-4025-905D-38A629AB78FD} = {BD78E284-96F6-4025-905D-38A629AB78FD}
+		{AB189E93-41D9-4811-9A10-D934CB501B3A} = {AB189E93-41D9-4811-9A10-D934CB501B3A}
+		{F02E47AF-1614-40BE-9AAE-26CC50A66571} = {F02E47AF-1614-40BE-9AAE-26CC50A66571}
+		{4A4182F2-3DCB-457A-9172-922E4831268C} = {4A4182F2-3DCB-457A-9172-922E4831268C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInvoice.Tests", "MyInvoice.Tests\MyInvoice.Tests.csproj", "{8E60BBFE-7ED9-4039-9957-051A715F249F}"
 EndProject
@@ -14,6 +21,25 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{85AD7572-ED26-465B-A8DC-1459DDBBD2F7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInvoice.Domain.Core", "Domain\MyInvoice.Domain.Core\MyInvoice.Domain.Core.csproj", "{1ADF601D-83C1-44A5-A84D-E6DE0C7EDBA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInvoice.Domain.Interfaces", "MyInvoice.Domain.Interfaces\MyInvoice.Domain.Interfaces.csproj", "{F02E47AF-1614-40BE-9AAE-26CC50A66571}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInvoice.Services.Interfaces", "MyInvoice.Services.Interfaces\MyInvoice.Services.Interfaces.csproj", "{4A4182F2-3DCB-457A-9172-922E4831268C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F02E47AF-1614-40BE-9AAE-26CC50A66571} = {F02E47AF-1614-40BE-9AAE-26CC50A66571}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInvoice.Infrastructure.Data", "MyInvoice.Infrastructure.Data\MyInvoice.Infrastructure.Data.csproj", "{BD78E284-96F6-4025-905D-38A629AB78FD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F02E47AF-1614-40BE-9AAE-26CC50A66571} = {F02E47AF-1614-40BE-9AAE-26CC50A66571}
+		{4A4182F2-3DCB-457A-9172-922E4831268C} = {4A4182F2-3DCB-457A-9172-922E4831268C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyInvoice.Infrastructure.Business", "MyInvoice.Infrastructure.Business\MyInvoice.Infrastructure.Business.csproj", "{AB189E93-41D9-4811-9A10-D934CB501B3A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F02E47AF-1614-40BE-9AAE-26CC50A66571} = {F02E47AF-1614-40BE-9AAE-26CC50A66571}
+		{4A4182F2-3DCB-457A-9172-922E4831268C} = {4A4182F2-3DCB-457A-9172-922E4831268C}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,12 +59,32 @@ Global
 		{1ADF601D-83C1-44A5-A84D-E6DE0C7EDBA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ADF601D-83C1-44A5-A84D-E6DE0C7EDBA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ADF601D-83C1-44A5-A84D-E6DE0C7EDBA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F02E47AF-1614-40BE-9AAE-26CC50A66571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F02E47AF-1614-40BE-9AAE-26CC50A66571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F02E47AF-1614-40BE-9AAE-26CC50A66571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F02E47AF-1614-40BE-9AAE-26CC50A66571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A4182F2-3DCB-457A-9172-922E4831268C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A4182F2-3DCB-457A-9172-922E4831268C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A4182F2-3DCB-457A-9172-922E4831268C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A4182F2-3DCB-457A-9172-922E4831268C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD78E284-96F6-4025-905D-38A629AB78FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD78E284-96F6-4025-905D-38A629AB78FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD78E284-96F6-4025-905D-38A629AB78FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD78E284-96F6-4025-905D-38A629AB78FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB189E93-41D9-4811-9A10-D934CB501B3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB189E93-41D9-4811-9A10-D934CB501B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB189E93-41D9-4811-9A10-D934CB501B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB189E93-41D9-4811-9A10-D934CB501B3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1ADF601D-83C1-44A5-A84D-E6DE0C7EDBA9} = {CD2BBFDE-F057-4A79-A23E-473391074133}
+		{F02E47AF-1614-40BE-9AAE-26CC50A66571} = {CD2BBFDE-F057-4A79-A23E-473391074133}
+		{4A4182F2-3DCB-457A-9172-922E4831268C} = {85AD7572-ED26-465B-A8DC-1459DDBBD2F7}
+		{BD78E284-96F6-4025-905D-38A629AB78FD} = {C33F4C1A-BD38-4947-8A11-0208F3C19C69}
+		{AB189E93-41D9-4811-9A10-D934CB501B3A} = {C33F4C1A-BD38-4947-8A11-0208F3C19C69}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A96A6901-2163-4E32-B200-2C1EB4E83033}

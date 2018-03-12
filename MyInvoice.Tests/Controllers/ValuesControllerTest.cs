@@ -47,7 +47,6 @@ namespace MyInvoice.Tests.Controllers
         {
             // Arrange
             ValuesController controller = new ValuesController();
-
             // Act
             controller.Post("value");
 
