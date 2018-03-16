@@ -40,8 +40,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="ApplicationUser.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Base\BaseEntity.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="ContactProperty.cs" />
     <Compile Include="PropertyCategory.cs" />

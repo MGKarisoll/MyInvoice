@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 
 namespace MyInvoice.Domain.Interfaces
 {
-    public interface IAccountRepository : IRepository<Account>
+    public interface IAccountRepository : IRepository<User>
     {
-        Task<Account> GetItemAsync(string login, string password);
+        Task<User> GetItemAsync(string login, string password);
     }
 }

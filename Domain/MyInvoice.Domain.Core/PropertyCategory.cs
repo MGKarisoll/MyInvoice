@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyInvoice.Domain.Core.Base;
 
 namespace MyInvoice.Domain.Core
 {
-    public class PropertyCategory
+    public class PropertyCategory : BaseEntity
     {
-        public int Id { get; set; }
         public int PropertyId { get; set; }
         public string CategoryName { get; set; }
 
